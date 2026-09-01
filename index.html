@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVII CAKES | Sweetness Made Special</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="PHOTO-2026-09-01-08-17-59.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #fffaf7;
+    color: #352321;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,250,247,0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #f2e4de;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #d96c83;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #d96c83;
+}
+
+.cart-btn {
+    border: none;
+    background: #fff;
+    padding: 12px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(80,40,30,0.08);
+}
+
+.cart-btn span {
+    background: #d96c83;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+}
+
+/* HERO */
+.hero {
+    min-height: 650px;
+    padding: 70px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 40%, #f9d9df 0, transparent 35%),
+        #fffaf7;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-title {
+    color: #d96c83;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.about-content h2 span {
+    color: #d96c83;
+}
+
+.hero-text {
+    color: #806d68;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 40px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.primary-btn {
+    background: #d96c83;
+    color: white;
+    box-shadow: 0 10px 25px rgba(217,108,131,0.25);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: white;
+    border: 1px solid #ead8d2;
+}
+
+.hero-cake {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: #f7d3da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cake-emoji {
+    font-size: 180px;
+    filter: drop-shadow(0 25px 20px rgba(70,30,30,0.15));
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+}
+
+/* FEATURES */
+.features {
+    padding: 55px 8%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    background: white;
+    text-align: center;
+}
+
+.feature {
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #8a7772;
+    font-size: 14px;
+}
+
+/* SECTIONS */
+.cakes-section,
+.gallery,
+.contact {
+    padding: 100px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: #887671;
+}
+
+/* FILTER */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    border: 1px solid #ead8d2;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.filter.active,
+.filter:hover {
+    background: #d96c83;
+    color: white;
+    border-color: #d96c83;
+}
+
+/* CAKES */
+.cake-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.cake-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(70,40,30,0.07);
+    transition: 0.3s;
+}
+
+.cake-card:hover {
+    transform: translateY(-7px);
+}
+
+.cake-image {
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+}
+
+.pink-bg { background: #f8d9df; }
+.chocolate-bg { background: #ead2c5; }
+.white-bg { background: #f4eee8; }
+.purple-bg { background: #e4d9ed; }
+.brown-bg { background: #dbc0aa; }
+.peach-bg { background: #f8d5bd; }
+
+.cake-info {
+    padding: 22px;
+}
+
+.cake-info > span {
+    color: #d96c83;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.cake-info h3 {
+    font-size: 23px;
+    margin: 7px 0;
+}
+
+.cake-info p {
+    color: #887671;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cake-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cake-bottom strong {
+    font-size: 17px;
+}
+
+.cake-bottom button {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #d96c83;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ABOUT */
+.about {
+    padding: 100px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    background: #fff;
+}
+
+.about-image {
+    height: 450px;
+    border-radius: 30px;
+    background: #f8d9df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 160px;
+}
+
+.about-content h2 {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    color: #806d68;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(70,40,30,0.07);
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* CONTACT */
+.contact {
+    background: #fff;
+}
+
+form {
+    max-width: 750px;
+    margin: auto;
+    background: #fffaf7;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(60,30,20,0.07);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ead8d2;
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+    background: white;
+}
+
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #d96c83;
+}
+
+/* ADMIN PANEL STYLING */
+.admin-section {
+    background: #f2e4de;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.admin-img-wrap {
+    position: relative;
+    height: 100px;
+}
+
+.admin-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.admin-img-wrap .del-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    padding: 55px 8%;
+    background: #30201e;
+    color: white;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.socials a:hover {
+    color: #f1a9b8;
+}
+
+.copyright {
+    color: #bca9a4;
+    font-size: 13px;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(30,15,15,0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    width: 500px;
+    max-width: 100%;
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.modal-box h2 {
+    margin-bottom: 25px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.remove-item {
+    border: none;
+    background: #f5dce0;
+    color: #a7445a;
+    border-radius: 8px;
+    padding: 5px 9px;
+    cursor: pointer;
+}
+
+.cart-total {
+    padding: 25px 0;
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TOAST */
+#toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #30201e;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 12px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 3000;
+}
+
+#toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* MOBILE */
+@media (max-width: 850px) {
+    .navbar { padding: 0 5%; }
+    .navbar nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        display: none;
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    .navbar nav.show { display: flex; }
+    .menu-btn { display: block; }
+    .cart-btn { margin-left: auto; margin-right: 12px; }
+    .hero { flex-direction: column; text-align: center; padding-top: 70px; }
+    .hero-buttons { justify-content: center; }
+    .hero-cake { width: 280px; height: 280px; margin-top: 60px; }
+    .cake-emoji { font-size: 120px; }
+    .features { grid-template-columns: 1fr; }
+    .cake-grid { grid-template-columns: 1fr 1fr; }
+    .about { grid-template-columns: 1fr; gap: 40px; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 550px) {
+    .hero h1 { font-size: 45px; }
+    .section-heading h2 { font-size: 38px; }
+    .cake-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .about-image { height: 300px; font-size: 110px; }
+}
+</style>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <span>OVII</span> CAKES
+    </div>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0)" onclick="openAdmin()" style="color: #d96c83;">🔑 Admin</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+        🛒 <span id="cartCount">0</span>
+    </button>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="small-title">WELCOME TO OVII CAKES</p>
+        <h1>Sweet Moments<br><span>Made Beautiful.</span></h1>
+        <p class="hero-text">
+            Freshly baked cakes, cupcakes and delicious desserts
+            made with love for your special moments.
+        </p>
+        <div class="hero-buttons">
+            <a href="#cakes" class="primary-btn">Explore Cakes →</a>
+            <a href="#contact" class="secondary-btn">Order Now</a>
+        </div>
+    </div>
+    <div class="hero-cake">
+        <div class="cake-shadow"></div>
+        <img src="PHOTO-2026-09-01-08-17-59.jpg" alt="cake" class="cake-emoji">
+    </div>
+</section>
+
+
+<!-- FEATURES -->
+<section class="features">
+    <div class="feature">
+        <div class="feature-icon">🍰</div>
+        <h3>Freshly Baked</h3>
+        <p>Fresh ingredients and quality baking.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">❤️</div>
+        <h3>Made With Love</h3>
+        <p>Every cake is carefully handcrafted.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Get your favorite cake delivered.</p>
+    </div>
+</section>
+
+
+<!-- CAKES -->
+<section class="cakes-section" id="cakes">
+    <div class="section-heading">
+        <p class="small-title">OUR COLLECTION</p>
+        <h2>Choose Your <span>Favorite</span></h2>
+        <p>Delicious creations for birthdays, weddings, celebrations and everyday happiness.</p>
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter active" data-category="all">All</button>
+        <button class="filter" data-category="birthday">Birthday</button>
+        <button class="filter" data-category="chocolate">Chocolate</button>
+        <button class="filter" data-category="cupcake">Cupcakes</button>
+    </div>
+
+    <div class="cake-grid" id="cakeGrid">
+        <div class="cake-card" data-category="birthday">
+            <div class="cake-image pink-bg">🎂</div>
+            <div class="cake-info">
+                <span>Birthday</span>
+                <h3>Pink Celebration Cake</h3>
+                <p>Soft vanilla cake with creamy frosting.</p>
+                <div class="cake-bottom">
+                    <strong>LKR 4,500</strong>
+                    <button onclick="addToCart('Pink Celebration Cake',4500)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cake-card" data-category="chocolate">
+            <div class="cake-image chocolate-bg">🍫</div>
+            <div class="cake-info">
+                <span>Chocolate</span>
+                <h3>Chocolate Dream</h3>
+                <p>Rich chocolate cake with chocolate cream.</p>
+                <div class="cake-bottom">
+                    <strong>LKR 5,200</strong>
+                    <button onclick="addToCart('Chocolate Dream',5200)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cake-card" data-category="birthday">
+            <div class="cake-image white-bg">🎂</div>
+            <div class="cake-info">
+                <span>Birthday</span>
+                <h3>Elegant Vanilla</h3>
+                <p>Classic vanilla cake with fresh cream.</p>
+                <div class="cake-bottom">
+                    <strong>LKR 4,000</strong>
+                    <button onclick="addToCart('Elegant Vanilla',4000)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cake-card" data-category="cupcake">
+            <div class="cake-image purple-bg">🧁</div>
+            <div class="cake-info">
+                <span>Cupcake</span>
+                <h3>Pretty Cupcakes</h3>
+                <p>Box of six delicious handmade cupcakes.</p>
+                <div class="cake-bottom">
+                    <strong>LKR 2,500</strong>
+                    <button onclick="addToCart('Pretty Cupcakes',2500)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cake-card" data-category="chocolate">
+            <div class="cake-image brown-bg">🍫</div>
+            <div class="cake-info">
+                <span>Chocolate</span>
+                <h3>Triple Chocolate</h3>
+                <p>Three layers of pure chocolate happiness.</p>
+                <div class="cake-bottom">
+                    <strong>LKR 6,000</strong>
+                    <button onclick="addToCart('Triple Chocolate',6000)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cake-card" data-category="cupcake">
+            <div class="cake-image peach-bg">🧁</div>
+            <div class="cake-info">
+                <span>Cupcake</span>
+                <h3>Strawberry Cupcakes</h3>
+                <p>Fresh strawberry cupcakes with cream.</p>
+                <div class="cake-bottom">
+                    <strong>LKR 2,800</strong>
+                    <button onclick="addToCart('Strawberry Cupcakes',2800)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+   <div class="about-image">
+        <span>🎂</span>
+    </div>
+    <div class="about-content">
+        <p class="small-title">OUR STORY</p>
+        <h2>Baked With <span>Love</span></h2>
+        <p>At OVII CAKES, we believe every celebration deserves something delicious. Our cakes are made with carefully selected ingredients and lots of love.</p>
+        <p>From simple birthday cakes to beautiful celebration creations, we make every order special.</p>
+        <a href="#contact" class="primary-btn">Order Your Cake</a>
+    </div>
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+    <div class="section-heading">
+        <p class="small-title">SWEET MEMORIES</p>
+        <h2>Our <span>Gallery</span></h2>
+    </div>
+
+    <!-- DYNAMIC GALLERY CONTAINER -->
+    <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="section-heading">
+        <p class="small-title">GET IN TOUCH</p>
+        <h2>Let's Make Something <span>Sweet</span></h2>
+    </div>
+
+    <form id="orderForm">
+        <div class="form-row">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+        </div>
+
+        <select id="cakeSelect" required>
+            <option value="">Select a Cake</option>
+            <option>Pink Celebration Cake</option>
+            <option>Chocolate Dream</option>
+            <option>Elegant Vanilla</option>
+            <option>Pretty Cupcakes</option>
+            <option>Triple Chocolate</option>
+            <option>Strawberry Cupcakes</option>
+        </select>
+
+        <textarea id="message" placeholder="Your message / special requirements"></textarea>
+
+        <button type="submit" class="primary-btn">Send Order 💌</button>
+    </form>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">OVII CAKES</div>
+    <p>Sweetness made special. 🍰</p>
+    <div class="socials">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+    </div>
+    <p class="copyright">© 2026 OVII CAKES. All Rights Reserved.</p>
+</footer>
+
+
+<!-- CART MODAL -->
+<div class="modal" id="cartModal">
+    <div class="modal-box">
+        <button class="close" onclick="closeCart()">×</button>
+        <h2>Your Cart 🛒</h2>
+        <div id="cartItems"></div>
+        <div class="cart-total">Total: <strong id="cartTotal">Rs. 0</strong></div>
+        <button class="primary-btn" onclick="checkout()">Checkout via WhatsApp</button>
+    </div>
+</div>
+
+
+<!-- ADMIN MODAL -->
+<div class="modal" id="adminModal">
+    <div class="modal-box">
+        <button class="close" onclick="closeAdmin()">×</button>
+        <h2>Gallery Admin Panel 📸</h2>
+        
+        <div class="admin-section">
+            <h3>Add New Photo</h3>
+            <br>
+            <input type="file" id="imageInput" accept="image/*">
+            <button class="primary-btn" style="width: 100%;" onclick="uploadPhoto()">Upload Photo</button>
+        </div>
+
+        <h3 style="margin-top: 25px;">Manage Current Photos</h3>
+        <div class="admin-grid" id="adminGallery"></div>
+    </div>
+</div>
+
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+
+<script>
+let cart = [];
+
+// DEFAULT GALLERY IMAGES
+const defaultPhotos = [
+    "WhatsApp Image 2026-09-01 at 08.31.20.jpeg",
+    "o.jpeg",
+    "k.jpeg",
+    "p.jpeg",
+    "l.jpeg",
+    "w.jpeg"
+];
+
+// INITIALIZE GALLERY FROM LOCALSTORAGE
+function getPhotos() {
+    const saved = localStorage.getItem("ovii_gallery");
+    return saved ? JSON.parse(saved) : defaultPhotos;
+}
+
+function renderGallery() {
+    const photos = getPhotos();
+    const galleryGrid = document.getElementById("galleryGrid");
+    galleryGrid.innerHTML = "";
+
+    photos.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "ovii cake gallery photo";
+        galleryGrid.appendChild(img);
+    });
+}
+
+// ADMIN PANEL LOGIC
+function openAdmin() {
+    const password = prompt("Enter Admin Password:");
+    if (password === "OVII 0829") { // DEFAULT PASSWORD = 1234
+        document.getElementById("adminModal").classList.add("show");
+        renderAdminGallery();
+    } else if (password !== null) {
+        alert("Wrong Password!");
+    }
+}
+
+function closeAdmin() {
+    document.getElementById("adminModal").classList.remove("show");
+}
+
+function renderAdminGallery() {
+    const photos = getPhotos();
+    const adminGrid = document.getElementById("adminGallery");
+    adminGrid.innerHTML = "";
+
+    photos.forEach((src, index) => {
+        const div = document.createElement("div");
+        div.className = "admin-img-wrap";
+        div.innerHTML = `
+            <img src="${src}">
+            <button class="del-btn" onclick="deletePhoto(${index})">×</button>
+        `;
+        adminGrid.appendChild(div);
+    });
+}
+
+function uploadPhoto() {
+    const fileInput = document.getElementById("imageInput");
+    const file = fileInput.files[0];
+
+    if (!file) {
+        alert("Please select an image file first.");
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const photos = getPhotos();
+        photos.push(e.target.result);
+        localStorage.setItem("ovii_gallery", JSON.stringify(photos));
+        
+        renderGallery();
+        renderAdminGallery();
+        fileInput.value = "";
+        showToast("Photo added successfully!");
+    };
+
+    reader.readAsDataURL(file);
+}
+
+function deletePhoto(index) {
+    let photos = getPhotos();
+    photos.splice(index, 1);
+    localStorage.setItem("ovii_gallery", JSON.stringify(photos));
+    
+    renderGallery();
+    renderAdminGallery();
+    showToast("Photo deleted!");
+}
+
+// UI & MENU LOGIC
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
+
+const filters = document.querySelectorAll(".filter");
+const cakeCards = document.querySelectorAll(".cake-card");
+
+filters.forEach(button => {
+    button.addEventListener("click", () => {
+        filters.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+        const category = button.dataset.category;
+
+        cakeCards.forEach(card => {
+            if (category === "all" || card.dataset.category === category) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+// CART LOGIC
+function addToCart(name, price) {
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({ name: name, price: price, quantity: 1 });
+    }
+    updateCart();
+    showToast(name + " added to cart 🍰");
+}
+
+function updateCart() {
+    const cartCount = document.getElementById("cartCount");
+    let totalItems = 0;
+    cart.forEach(item => totalItems += item.quantity);
+    cartCount.textContent = totalItems;
+    renderCart();
+}
+
+function renderCart() {
+    const container = document.getElementById("cartItems");
+    const totalElement = document.getElementById("cartTotal");
+    container.innerHTML = "";
+
+    if (cart.length === 0) {
+        container.innerHTML = "<p>Your cart is empty.</p>";
+        totalElement.textContent = "Rs. 0";
+        return;
+    }
+
+    let total = 0;
+    cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        const div = document.createElement("div");
+        div.className = "cart-item";
+        div.innerHTML = `
+            <div>
+                <strong>${item.name}</strong><br>
+                Rs. ${item.price.toLocaleString()} x ${item.quantity}
+            </div>
+            <button class="remove-item" onclick="removeFromCart(${index})">Remove</button>
+        `;
+        container.appendChild(div);
+    });
+
+    totalElement.textContent = "Rs. " + total.toLocaleString();
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+    showToast("Item removed");
+}
+
+function openCart() {
+    document.getElementById("cartModal").classList.add("show");
+}
+
+function closeCart() {
+    document.getElementById("cartModal").classList.remove("show");
+}
+
+document.getElementById("cartModal").addEventListener("click", function(event) {
+    if (event.target === this) closeCart();
+});
+
+// WHATSAPP CHECKOUT
+function checkout() {
+    if (cart.length === 0) {
+        showToast("Your cart is empty 🍰");
+        return;
+    }
+
+    let message = "Hello OVII CAKES! 🍰\n\nI would like to order:\n";
+    let total = 0;
+
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        message += `\n• ${item.name} × ${item.quantity} - Rs. ${itemTotal.toLocaleString()}`;
+    });
+
+    message += `\n\nTotal: Rs. ${total.toLocaleString()}`;
+
+    const phoneNumber = "94770000000"; // ඔබේ WhatsApp අංකය මෙතනට දමන්න
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+}
+
+// FORM ORDER TO WHATSAPP
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const cake = document.getElementById("cakeSelect").value;
+    const message = document.getElementById("message").value.trim();
+
+    const phoneNumber = "94770000000"; // ඔබේ WhatsApp අංකය මෙතනට දමන්න
+
+    let textMessage = `Hello OVII CAKES! 🍰\n\nI would like to place an order:\n\n`;
+    textMessage += `👤 *Name:* ${name}\n`;
+    textMessage += `📞 *Phone:* ${phone}\n`;
+    textMessage += `🎂 *Cake:* ${cake}\n`;
+    
+    if (message !== "") {
+        textMessage += `📝 *Special Notes:* ${message}\n`;
+    }
+
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(textMessage)}`;
+    window.open(whatsappURL, "_blank");
+    this.reset();
+});
+
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.add("show");
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2500);
+}
+
+// INITIAL RENDER
+renderGallery();
+</script>
+
+</body>
+</html>
